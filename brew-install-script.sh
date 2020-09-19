@@ -7,7 +7,7 @@ echo "Installing brew..."
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 echo "Installing brew cask..."
-brew tap caskroom/cask
+brew tap homebrew/cask
 
 # Programming Languages
 brew cask install java
