@@ -3,7 +3,9 @@
 # Codespaces
 brew install az
 brew install node
-# brew install elm
+brew install yarn
+brew cask install docker
+brew cask install dotnet
 
 # Microsoft
 brew cask install intune-company-portal
@@ -12,6 +14,7 @@ brew cask install intune-company-portal
 brew install gh
 brew install docker
 brew cask install visual-studio-code
+brew cask install qbserve
 
 # Communication Apps
 brew cask install slack

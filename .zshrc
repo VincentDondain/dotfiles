@@ -75,7 +75,7 @@ alias verify-codesign='codesign --verify --deep --strict --verbose=2'
 alias md5='openssl md5'
 
 # Codespaces
-alias web='/Users/vidondai/Documents/Codespaces/vsclk-core/src/Portal/PortalWebsite/Src/Website'
+alias web='/Users/vidondai/Documents/vsclk-core/src/Portal/PortalWebsite/Src/Website'
 alias pfreadme='code /Users/vidondai/Documents/Codespaces/vsclk-core/build/port-forwarding/README.md'
 alias cascade='/Users/vidondai/Documents/Codespaces/Cascade'
 alias flushdns='sudo killall -HUP mDNSResponder;say DNS cache has been flushed'
@@ -170,3 +170,4 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 eval $(/usr/libexec/path_helper -s)
 eval "$(rbenv init -)"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
