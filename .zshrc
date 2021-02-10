@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/vidondai/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 install-pkg () {
 	sudo installer -pkg $1 -target /
@@ -17,10 +17,6 @@ gse-update-all () {
 	github-status-editor --repository xamarin/xamarin-macios --hash $1 --set=success --authorization=e6dd39b6b757262921868eae6b68849333c08692 --message "$2"
 }
 
-clio-list () {
-	clio --github=xamarin/xamarin-macios --github-pat-file=$HOME/.github-status-pat --oldest=$1 --newest=$2 $HOME/Documents/xi-master/xamarin-macios
-}
-
 alias gse-list='github-status-editor --repository xamarin/xamarin-macios --hash'
 
 alias bigfolder='du -sch .[!.]* * | sort -hr'
@@ -28,7 +24,7 @@ alias bigfolder='du -sch .[!.]* * | sort -hr'
 alias xcdevice='open xcdevice://showDevicesWindow'
 alias symbolicate="/Applications/Xcode.app/Contents/SharedFrameworks/DVTFoundation.framework/Versions/A/Resources/symbolicatecrash -v"
 
-alias add-ssh-key='ssh-add -K /Users/vidondai/.ssh/id_rsa'
+alias add-ssh-key='ssh-add -K $HOME/.ssh/id_rsa'
 
 alias make-md='./configure && make'
 alias run-md='./configure && make && make run'
@@ -39,7 +35,7 @@ alias fg='find . | grep '
 
 alias header-files='cd /Applications/Xcode72-beta1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/'
 alias count-changes='wc -l *.md'
-alias snippets='/Users/vidondai/Library/Application\ Support/Sublime\ Text\ 3/Packages/User'
+alias snippets='$HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User'
 
 alias remove-vmware-license='sudo rm /Library/Preferences/VMware\ Fusion/license-fusion-*'
 
@@ -75,12 +71,12 @@ alias verify-codesign='codesign --verify --deep --strict --verbose=2'
 alias md5='openssl md5'
 
 # Codespaces
-alias web='/Users/vidondai/Documents/vsclk-core/src/Portal/PortalWebsite/Src/Website'
-alias pfreadme='code /Users/vidondai/Documents/Codespaces/vsclk-core/build/port-forwarding/README.md'
-alias cascade='/Users/vidondai/Documents/Codespaces/Cascade'
+alias web='$HOME/Documents/vsclk-core/src/Portal/PortalWebsite/Src/Website'
+alias pfreadme='code $HOME/Documents/Codespaces/vsclk-core/build/port-forwarding/README.md'
+alias cascade='$HOME/Documents/Codespaces/Cascade'
 alias flushdns='sudo killall -HUP mDNSResponder;say DNS cache has been flushed'
 alias nginxconf='code /usr/local/etc/nginx/nginx.conf'
-alias vscodeext='/Users/vidondai/.vscode-insiders/extensions'
+alias vscodeext='$HOME/.vscode-insiders/extensions'
 
 # K8s
 alias see-helm-dry='helm install errors-backend ./errors-backend --debug --dry-run --set image.repositoryUrl=a --set image.tag=b' # see what helm does
@@ -139,7 +135,7 @@ plugins=(git brew osx sublime)
 # User configuration
 
 #/usr/bin
-export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/bin:/usr/sbin:/sbin:/Library/Frameworks/Mono.framework/Versions/Current/bin:$HOME/.fastlane/bin:/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/bin:/Users/vidondai/Documents/github-status-editor:/Users/vidondai/Documents/github-issue-mover:$HOME/bin/clio:/Users/vidondai/.dotnet/tools:$PATH"
+export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/bin:/usr/sbin:/sbin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
