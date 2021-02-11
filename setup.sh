@@ -16,10 +16,6 @@ sudo apt-get install -y \
 # Install & Configure Zsh
 if [ "$INSTALL_ZSH" = "true" ]
 then
-    sudo apt-get install -y \
-    fonts-powerline \
-    zsh
-
     cp -f ~/dotfiles/.zshrc ~/.zshrc
     chsh -s /usr/bin/zsh $USERNAME
     wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
